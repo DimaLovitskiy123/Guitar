@@ -1,11 +1,11 @@
-public class Guitar implements Tuner {
-    private  ReturnStrings returnStrings;
+public class Guitar implements Tune{
+    private  Tune tune;
 
-    public Guitar(ReturnStrings returnStrings){
-        this.returnStrings = returnStrings;
-    }
+
 
     public void play(){
-        System.out.println(returnStrings.returnSting());;
+        for (int plaing = 0; plaing < 6; plaing++){
+            System.out.println(strings[plaing]);
+        }
     }
 }
