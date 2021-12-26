@@ -1,11 +1,17 @@
-public class Guitar implements Tune{
-    private  Tune tune;
+import java.util.List;
 
+public class Guitar {
+    private IGuitarStrings iGuitarStrings;
 
+    private static List<IGuitarStrings> strings;
 
-    public void play(){
-        for (int plaing = 0; plaing < 6; plaing++){
-            System.out.println(strings[plaing]);
+    public Guitar(List<IGuitarStrings> strings){
+        this.strings = strings;
+    }
+
+    public static void tuneGuitar(){
+        for (IGuitarStrings run : strings){
+            GuitarString.tune();
         }
     }
 }
